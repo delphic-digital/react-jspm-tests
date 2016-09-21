@@ -1,5 +1,5 @@
 import React from 'react';
-import Paragraph from './components/Paragraph';
+import Paragraph from './components/Paragraph.js';
 
 class App extends React.Component {
 	constructor(props) {
@@ -15,7 +15,16 @@ class App extends React.Component {
 
 	getCat() {
 
-		System.import( 'Static/src/js/components/Cat' ).then( CatModule => {
+		/* we need a `__moduleName` here to support relative urls. Spec is still incoming:
+
+		https://github.com/systemjs/systemjs/blob/master/docs/module-formats.md#es6
+		https://github.com/systemjs/systemjs/issues/1185#issuecomment-210865981
+
+		*/
+
+		const moduleName = 'Cat'
+
+		System.import('./components/'+moduleName, __moduleName).then( CatModule => {
 			let myCat = new CatModule.Cat('babu');
 			this.setState({cat: myCat.meow()});
 		})

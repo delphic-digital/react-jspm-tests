@@ -1,21 +1,13 @@
 SystemJS.config({
   paths: {
     "npm:": "jspm_packages/npm/",
-    "github:": "jspm_packages/github/"
+    "github:": "jspm_packages/github/",
+    "react-jspm-tests/": "Static/dist/js/"
   },
   browserConfig: {
     "baseURL": ".",
-    "trace": true,
-    "defaultJSExtensions": true,
-    "paths": {
-      "react-jspm-tests/": "Static/src/js/"
-    }
   },
   nodeConfig: {
-    "defaultJSExtensions": true,
-    "paths": {
-      "react-jspm-tests/": "Static/src/js/"
-    }
   },
   devConfig: {
     "map": {
@@ -74,12 +66,13 @@ SystemJS.config({
       "main": "index.js",
       "meta": {
         "*.js": {
-         "babelOptions": {
-            "plugins": ["babel-plugin-transform-react-jsx"]
+          "babelOptions": {
+            "plugins": [
+              "babel-plugin-transform-react-jsx"
+            ]
           }
         }
       }
-
     }
   }
 });

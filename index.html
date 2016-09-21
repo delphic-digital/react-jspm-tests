@@ -6,10 +6,13 @@
 	</head>
 	<body>
 		<div id="main"></div>
-		<script src="jspm_packages/system.js"></script>
-		<script src="/Static/src/js/jspm.config.js"></script>
-		<script>
-			SystemJS.import('Static/src/js/index');
-		</script>
+
+<script src="jspm_packages/system.js"></script>
+	<script src="/Static/src/js/jspm.config.js"></script>
+	<script src="/Static/dist/js/index.bundle.js"></script>
+
+	<script>
+		SystemJS.import('react-jspm-tests');
+	</script>
 	</body>
  </html>

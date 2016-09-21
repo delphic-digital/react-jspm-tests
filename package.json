@@ -102,6 +102,7 @@
   "scripts": {
     "start": "npm-run-all --parallel serve watch",
     "serve": "browser-sync start --server",
-    "watch": "chokidar-socket-emitter"
+    "watch": "chokidar-socket-emitter",
+    "build": "jspm bundle Static/src/js/index.js Static/dist/js/index.bundle.js  --skip-source-maps --minify && jspm bundle Static/src/js/components/Cat.js Static/dist/js/components/Cat.js --skip-source-maps --minify"
   }
 }

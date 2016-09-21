@@ -1,8 +1,8 @@
 //Hot swapping for dev
-import 'systemjs-hot-reloader/default-listener.js';
+//import 'systemjs-hot-reloader/default-listener.js';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import App from './App.js';
 
 ReactDOM.render(<App />, document.getElementById("main"));
