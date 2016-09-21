@@ -6,13 +6,22 @@
 	</head>
 	<body>
 		<div id="main"></div>
+		<script>
+			//window.jsBasePath = 'Static/src/js/'
 
-<script src="jspm_packages/system.js"></script>
-	<script src="/Static/src/js/jspm.config.js"></script>
-	<script src="/Static/dist/js/index.bundle.js"></script>
+			//@Production
+			window.jsBasePath = 'Static/dist/js/'
+		</script>
 
-	<script>
-		SystemJS.import('react-jspm-tests');
-	</script>
+		<script src="jspm_packages/system.js"></script>
+		<script src="/Static/src/js/jspm.config.js"></script>
+
+		<!--@Production -->
+		<script src="/Static/dist/js/index.bundle.js"></script>
+		<!--@Production End  -->
+
+		<script>
+			SystemJS.import('react-jspm-tests');
+		</script>
 	</body>
  </html>

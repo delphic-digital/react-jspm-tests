@@ -2,7 +2,7 @@ SystemJS.config({
   paths: {
     "npm:": "jspm_packages/npm/",
     "github:": "jspm_packages/github/",
-    "react-jspm-tests/": "Static/dist/js/"
+    "react-jspm-tests/": window.jsBasePath
   },
   browserConfig: {
     "baseURL": ".",
