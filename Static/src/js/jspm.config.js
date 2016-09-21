@@ -71,7 +71,7 @@ SystemJS.config({
   transpiler: "plugin-babel",
   packages: {
     "react-jspm-tests": {
-      "main": "main.js",
+      "main": "index.js",
       "meta": {
         "*.js": {
          "babelOptions": {
@@ -79,6 +79,7 @@ SystemJS.config({
           }
         }
       }
+
     }
   }
 });
